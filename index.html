@@ -7,7 +7,31 @@
 	
 	<script type = "text/javascript">
 		function psu(){
+			let stu = 10;
 			alert("hello");
+			document.getElementById("sdf").innerHTML = "stu";
+		}
+		function solution(asdf){
+			let temp1 = 0;
+			let temp2 = 0;
+			let arr1 = [];
+			arr1 = document.getElementById("text_box").value;
+			for(let i of arr1){
+				if(!isNaN(i)){
+					temp2 += i;
+					if(i == arr1[arr1.length - 1]){
+						console.log(parseInt(temp2));
+						console.log(temp1);
+						temp1 += parseInt(temp2);
+					}
+				}
+				else{
+						temp1 += parseInt(temp2);
+						console.log(parseInt(temp2));
+						console.log(temp1);
+					}
+			}
+			document.getElementById("arr").innerHTML = temp1;
 		}
 	</script>
 	
@@ -15,9 +39,26 @@
 	
 	<body>
 		<button type="button" onclick="psu()">
-			button
+			button1
 		</button>
-		<h1>asdfasdf</h1>
+		<input type = "text" id = "text_box">
+		<button type="button" onclick="solution()">
+			button2
+		</button>
+		<p id="arr"></p>
+		<table border="1">
+			<th>테이블</th>
+			<th>만들기</th>
+			<tr>
+				<td>첫번째 칸</td>
+				<td>두번째 칸</td>
+			</tr>
+			<tr>
+				<td id = "sdf">첫번째 칸</td>
+				<td>두번째 칸</td>
+			</tr>
+		</table>
+		
 	</body>
 
 </html>
